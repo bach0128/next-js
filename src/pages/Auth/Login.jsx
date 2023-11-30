@@ -10,6 +10,7 @@ export default function Login() {
   const handleGetApiKey = async (e) => {
     e.preventDefault();
     const { data } = await client.get(`/api-key?email=${email}`);
+    console.log(data);
     if (data.code === 200) {
       localStorage.setItem("apiKey", JSON.stringify(data.data.apiKey));
       navigate("/");

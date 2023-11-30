@@ -6,7 +6,9 @@ export const client = {
     this.serverApi = url;
   },
   send: async function (url, method = "GET", body = null) {
-    url = `${this.serverApi}${url}`;
+    url = `https://api-exercise-trello.vercel.app/api/v1${url}`;
+    console.log(this.serverApi);
+
     const apiKey = JSON.parse(localStorage.getItem("apiKey"));
     const headers = {
       "Content-Type": "application/json",
