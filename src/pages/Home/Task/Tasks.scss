@@ -1,0 +1,51 @@
+.list {
+    min-width: 350px;
+    max-width: 350px;
+    min-height: 400px;
+    max-height: 400px;
+    padding: 4px;
+    overflow-y: auto;
+    .task {
+        position: relative;
+        background-color: #373b445a;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 2px;
+        padding-bottom: 60px;
+        margin-bottom: 6px;
+        font-size: 1.2rem;
+        &:hover {
+            border: 2px solid darkgoldenrod;
+            .btn-del-task {
+                display: block;
+            }
+        }
+        .btn-del-task {
+            display: none;
+            position: absolute;
+            right: 10px;
+            border: none;
+            background-color: rgba(55, 59, 68, 0.048);
+            color: darkslategrey;
+            
+        }
+    }
+    .new-task {
+        
+        .input-new-task {
+            position: relative;
+            z-index: 10;
+            background-color: rgba(55, 59, 68, 0.3529411765);
+            border-radius: 5px;
+            padding: 10px;   
+            height: 90px;
+            min-width: 340px;
+            max-width: 340px;
+            color: black;
+            outline: none;
+            &:hover,&:focus {
+                border: 2px solid rgb(195, 114, 9) ;
+            }
+        }
+    }
+}
